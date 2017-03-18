@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -29,22 +30,25 @@ public class PingWindow extends Application {
 		//mainLayout.setPadding(new Insets(10, 10, 10, 10));
 
 		TextField mailSubject = new TextField();
-		mailSubject.setStyle("-fx-background-color: #424242");
+		mailSubject.setStyle("-fx-background-color: #424242; -fx-text-fill: aliceblue");
 		//mailSubject.setPadding(new Insets(10, 0, 10, 0));
 		TextArea mailText = new TextArea();
-		mailText.setStyle("-fx-border-color: transparent;");
+		mailText.setStyle("-fx-background-insets: 0; -fx-background-color: transparent, transparent , transparent, transparent; -fx-text-fill: aliceblue");
 
 		Button settingsButton = new Button();
 		Button sendButton = new Button("Send", new ImageView(sendIcon));
 		Button exitButton = new Button();
 		HBox buttonBar = new HBox(sendButton, settingsButton, exitButton);
+		buttonBar.setAlignment(Pos.CENTER);
+		buttonBar.setSpacing(5);
+
 
 		settingsButton.setGraphic(new ImageView(settingsIcon));
 		exitButton.setGraphic(new ImageView(closeIcon));
 
-		settingsButton.setStyle("-fx-base: #282a36;");
-		exitButton.setStyle("-fx-base: #282a36;");
-		sendButton.setStyle("-fx-base: #282a36;");
+		settingsButton.setStyle("-fx-base: #212121;");
+		exitButton.setStyle("-fx-base: #212121;");
+		sendButton.setStyle("-fx-base: #212121;");
 
 		GridPane.setRowIndex(mailSubject, 0);
 		GridPane.setRowIndex(mailText, 1);
@@ -59,7 +63,7 @@ public class PingWindow extends Application {
 		primaryStage.show();
 
 		Region region = (Region) mailText.lookup(".content");
-		region.setStyle("-fx-background-color: #424242; ");
+		region.setStyle("-fx-background-color: #424242; -fx-background-insets: 0;");
 
 	}
 
