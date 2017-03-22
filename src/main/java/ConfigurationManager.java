@@ -29,6 +29,6 @@ public class ConfigurationManager {
 
 	public static Configuration createConfig() {
 		JSONObject configJSON = new JSONObject();
-
+		return null;
 	}
 }
