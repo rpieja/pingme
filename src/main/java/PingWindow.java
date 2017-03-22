@@ -30,10 +30,10 @@ public class PingWindow extends Application {
 		//mainLayout.setPadding(new Insets(10, 10, 10, 10));
 
 		TextField mailSubject = new TextField();
-		mailSubject.setStyle("-fx-background-color: #424242; -fx-text-fill: aliceblue");
+		mailSubject.setStyle("-fx-background-color: #424242; -fx-text-fill: whitesmoke");
 		//mailSubject.setPadding(new Insets(10, 0, 10, 0));
 		TextArea mailText = new TextArea();
-		mailText.setStyle("-fx-background-insets: 0; -fx-background-color: transparent, transparent , transparent, transparent; -fx-text-fill: aliceblue");
+		mailText.setStyle("-fx-background-insets: 0; -fx-background-color: transparent, transparent , transparent, transparent; -fx-text-fill: whitesmoke");
 
 		Button settingsButton = new Button();
 		Button sendButton = new Button("Send", new ImageView(sendIcon));

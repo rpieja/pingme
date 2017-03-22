@@ -1,5 +1,13 @@
+import javafx.application.Application;
+import javafx.stage.Stage;
+
 /**
  * Created by radix on 3/18/17.
  */
-public class SettingsWindow {
+public class SettingsWindow extends Application {
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+
+	}
 }
